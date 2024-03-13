@@ -1,0 +1,39 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    font-family: "Ubuntu";
+}
+main {
+    background-image: url("/bg-sidebar-mobile.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    padding: 0 1rem;
+    height: calc(100vh - 75px);
+    overflow-y: auto;
+    z-index: 100;
+}
+
+body {
+    background-color: lightblue;
+    height: 100vh;
+}
+
+.step--container {
+    @apply bg-white shadow-lg p-6 rounded-lg shadow-marine;
+}
+
+label {
+    @apply text-sm text-marine m-0;
+}
+
+input {
+    @apply w-full px-4 py-2 rounded border border-gray-300 cursor-pointer active:ring-purplish outline-purplish;
+}
+
+.btn {
+    @apply px-4 py-2 rounded-lg bg-marine text-magnolia font-medium transition cursor-pointer hover:bg-purplish;
+}
