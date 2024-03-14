@@ -89,10 +89,12 @@ const Step4 = () => {
                 </div>
             </div>
 
-            <div className='justify-between flex pt-4'>
-                <p>Total {yearly ? "per year" : "per month"}</p>
+            <div className='justify-between flex pt-4 px-4'>
+                <p className='text-coolGray'>
+                    Total {yearly ? "per year" : "per month"}
+                </p>
 
-                <span>
+                <span className='text-purplish font-bold'>
                     +${total}
                     {priceEndString}
                 </span>

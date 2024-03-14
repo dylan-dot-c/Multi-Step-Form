@@ -19,9 +19,12 @@ const Step3 = () => {
             <form className='mt-2 space-y-4'>
                 {addons.map((addon, index) => {
                     const name = addon.name;
+                    const checked = addOns[addon.name as AddonsKeys];
                     return (
                         <div
-                            className='field flex gap-4 items-center border border-coolGray p-4 rounded-md '
+                            className={`field flex gap-4 items-center border border-coolGray p-4 rounded-md ${
+                                checked && "bg-lightBlue"
+                            }`}
                             key={index}>
                             <div className=''>
                                 <input
@@ -30,7 +33,7 @@ const Step3 = () => {
                                     id={name}
                                     name={name}
                                     className='accent-purplish scale-150'
-                                    checked={addOns[addon.name as AddonsKeys]}
+                                    checked={checked}
                                     onChange={(e) =>
                                         updateAddons(
                                             e.target.name as AddonsKeys,

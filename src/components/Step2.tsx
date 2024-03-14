@@ -47,7 +47,7 @@ const Step2 = () => {
                                 />
 
                                 <div>
-                                    <p className='font-bold text-marine'>
+                                    <p className='font-medium text-marine'>
                                         {plan.name}
                                     </p>
                                     <p className='text-sm text-coolGray'>
@@ -64,14 +64,14 @@ const Step2 = () => {
                 </div>
                 <div className='bg-lightBlue px-4 py-2 flex justify-center gap-4 mt-4 rounded-lg'>
                     <span
-                        className={`font-bold ${
+                        className={`font-medium ${
                             checked ? "text-coolGray" : "text-marine"
                         } `}>
                         Monthly
                     </span>
                     <Switch checked={checked} toggle={toggleYearly} />
                     <span
-                        className={`font-bold ${
+                        className={`font-medium ${
                             checked ? "text-marine" : "text-coolGray"
                         }`}>
                         Yearly

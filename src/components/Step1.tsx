@@ -1,5 +1,4 @@
 import StepHeader from "./StepHeader";
-import { useEffect } from "react";
 import useFormData, { PersonalErrors } from "../stores/FormData";
 import LabelError from "./LabelError";
 
@@ -17,13 +16,6 @@ const Step1 = () => {
         updatePersonal(name, value);
     };
 
-    useEffect(() => {
-        return () => {
-            console.log("Form Has been Submitted");
-            console.log(personal);
-        };
-    }, []);
-
     const getErrors = (key: keyof PersonalErrors) => {
         if (formErrors[key]) {
             return "border-strawBerryred";
@@ -38,7 +30,11 @@ const Step1 = () => {
 
             <form className='space-y-4 pt-2'>
                 <div className='field'>
-                    <LabelError name='name' error={formErrors.name} />
+                    <LabelError
+                        name='name'
+                        error={formErrors.name}
+                        title='Name'
+                    />
                     <input
                         type='text'
                         id='name'
@@ -52,7 +48,11 @@ const Step1 = () => {
                     />
                 </div>
                 <div className='field'>
-                    <LabelError name='email' error={formErrors.email} />
+                    <LabelError
+                        name='email'
+                        error={formErrors.email}
+                        title='Email Address'
+                    />
                     <input
                         type='email'
                         name='email'
@@ -65,7 +65,11 @@ const Step1 = () => {
                 </div>
 
                 <div className='field'>
-                    <LabelError name='phone' error={formErrors.phone} />{" "}
+                    <LabelError
+                        name='phone'
+                        error={formErrors.phone}
+                        title='Phone Number'
+                    />{" "}
                     <input
                         type='phone'
                         name='phone'

@@ -21,7 +21,7 @@ const NavBar = ({ steps }: Props) => {
                                 ? "bg-lightBlue font-bold text-black"
                                 : "text-white"
                         }`}>
-                        {index}
+                        {index + 1}
                     </div>
                 );
             })}

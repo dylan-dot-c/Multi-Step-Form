@@ -5,7 +5,7 @@ export default {
         extend: {
             colors: {
                 primary: "hsl(213, 96%, 18%)",
-                lightBlue: "lightblue",
+                lightBlue: "#EBF2FC",
                 marine: "hsl(213, 96%, 18%)",
                 purplish: "hsl(243, 100%, 62%)",
                 pastel: "hsl(228, 100%, 84%)",

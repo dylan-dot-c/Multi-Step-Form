@@ -18,12 +18,12 @@ main {
 }
 
 body {
-    background-color: lightblue;
     height: 100vh;
+    @apply bg-lightBlue;
 }
 
 .step--container {
-    @apply bg-white shadow-lg p-6 rounded-lg shadow-marine;
+    @apply bg-white shadow-md p-6 rounded-lg shadow-pastel;
 }
 
 label {
