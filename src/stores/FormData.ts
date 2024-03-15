@@ -2,6 +2,7 @@ import { create } from "zustand";
 
 type FormData = {
     currentStep: number;
+    prevStep: number;
     personal: Personal;
     personalErrors: PersonalErrors;
     plan: {
@@ -46,9 +47,18 @@ type Addons = {
 export type AddonsKeys = keyof Addons;
 const useFormData = create<FormData>((set) => ({
     currentStep: 0,
-    increment: () => set((state) => ({ currentStep: state.currentStep + 1 })),
+    prevStep: 0,
+    increment: () =>
+        set((state) => ({
+            currentStep: state.currentStep + 1,
+            prevStep: state.currentStep,
+        })),
     goTo: (num) => set(() => ({ currentStep: num })),
-    decrement: () => set((state) => ({ currentStep: state.currentStep - 1 })),
+    decrement: () =>
+        set((state) => ({
+            currentStep: state.currentStep - 1,
+            prevStep: state.currentStep,
+        })),
     personal: {
         name: "",
         email: "",
