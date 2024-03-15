@@ -53,8 +53,8 @@ const Step4 = () => {
 '
             />
             <div className='bg-lightBlue rounded-md p-4'>
-                <div className='text-marine flex justify-between items-center border-b pb-2 border-b-coolGray'>
-                    <div className=''>
+                <div className='text-marine flex justify-between items-center '>
+                    <div>
                         <p className='font-bold'>{plan}</p>
                         <span
                             className='text-coolGray underline'
@@ -64,6 +64,7 @@ const Step4 = () => {
                     </div>
                     <div className='font-bold'>{planPriceString}</div>
                 </div>
+                <div className='border-b border-b-coolGray my-3'></div>
                 <div className='space-y-2'>
                     {selectedAddons.map((addon) => {
                         const price =
@@ -82,7 +83,7 @@ const Step4 = () => {
                         );
                     })}
                     {selectedAddons.length == 0 && (
-                        <p className='text-center text-coolGray'>
+                        <p className='text-center text-coolGray p-4'>
                             No Addons Selected
                         </p>
                     )}

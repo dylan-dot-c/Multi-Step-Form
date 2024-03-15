@@ -23,7 +23,7 @@ const Step2 = () => {
             />
 
             <form>
-                <div className=' grid  gap-4 mt-4'>
+                <div className=' grid  gap-4 mt-4 md:grid-cols-3'>
                     {plans.map((plan, index) => {
                         const price = checked
                             ? plan.price.yearly
@@ -35,9 +35,9 @@ const Step2 = () => {
                             <div
                                 onClick={() => changePlan(index)}
                                 key={index}
-                                className={`flex gap-4 border p-4 rounded-lg transition items-start ${
+                                className={`flex gap-4 border p-4 rounded-lg transition items-start md:flex-col hover:border-purplish cursor-pointer md:gap-8 ${
                                     currentPlan == index
-                                        ? "bg-lightBlue border-marine"
+                                        ? "bg-lightBlue border-purplish"
                                         : "border-coolGray"
                                 }`}>
                                 <img
@@ -62,7 +62,7 @@ const Step2 = () => {
                         );
                     })}
                 </div>
-                <div className='bg-lightBlue px-4 py-2 flex justify-center gap-4 mt-4 rounded-lg'>
+                <div className='bg-lightBlue px-4 py-2 flex justify-center gap-4 mt-8 rounded-lg'>
                     <span
                         className={`font-medium ${
                             checked ? "text-coolGray" : "text-marine"

@@ -5,7 +5,9 @@ type SwitchProps = {
 
 const Switch = ({ checked, toggle }: SwitchProps) => {
     return (
-        <div className={`w-12 bg-marine  p-1 rounded-full`} onClick={toggle}>
+        <div
+            className={`w-12 bg-marine  p-1 rounded-full cursor-pointer`}
+            onClick={toggle}>
             <div
                 className={`rounded-full w-4 h-4 bg-white transition ${
                     checked && "translate-x-6"

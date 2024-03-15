@@ -60,12 +60,12 @@ const BottomNav = () => {
         return null;
     }
     return (
-        <div className='bg-white absolute bottom-0 left-0 w-full p-4 flex justify-between'>
+        <div className='bg-white fixed bottom-0 left-0 w-full p-4 flex justify-between md:static '>
             <div>
                 {currentStep > 0 && (
                     <button
                         onClick={decrement}
-                        className='px-4 py-2 font-bold text-coolGray hover:text-marine transition'>
+                        className='px-4 py-2 font-medium text-coolGray hover:text-marine transition'>
                         Go Back
                     </button>
                 )}

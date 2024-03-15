@@ -12,18 +12,25 @@ main {
     background-repeat: no-repeat;
     background-size: 100%;
     padding: 0 1rem;
-    height: calc(100vh - 75px);
     overflow-y: auto;
     z-index: 100;
+    height: calc(100vh - 75px);
+}
+
+@media (width >= 768px) {
+    main {
+        height: auto;
+        background-image: none;
+    }
 }
 
 body {
     height: 100vh;
-    @apply bg-lightBlue;
+    @apply bg-lightBlue md:grid md:place-items-center;
 }
 
 .step--container {
-    @apply bg-white shadow-md p-6 rounded-lg shadow-pastel;
+    @apply bg-white shadow-md p-6 rounded-lg shadow-pastel md:shadow-none;
 }
 
 label {
